@@ -14,4 +14,4 @@
 
 URL Netlify/Vercel|
 |--- |
-[Open Link](https://github.com/Yeison2708/adso2847431)
+[Open Link](https://hello-2847431.netlify.app/)
