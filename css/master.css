@@ -83,13 +83,14 @@ body{
 }
 
 nav{
-    border: 2px solid #fff9;
+    
     border-radius: 4px;
     padding: 8px;
     position: fixed;
     top: 20px;
     left: 20px;
     transition: all 0.4s ease-in;
+    
     a:is(:link, visited){
         width: 40px;
         height: 40px;
@@ -105,7 +106,9 @@ nav{
 }
 
 a:is(:hover) {
+    background-color: #000;
     transform: translateX(-4px);
+    border: 2px solid #fff9;
 }
 
 main{
