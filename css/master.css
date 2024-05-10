@@ -99,8 +99,8 @@ nav{
         transition: all 0.4s ease-in-out;
         svg{
             opacity: .7;
-            height: 32px;
-            width: 32px;
+            height: 20px;
+            width: 20px;
         }
     }
 }
