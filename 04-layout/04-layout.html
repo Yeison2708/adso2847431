@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Of Mordor</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <!-- Navbar -->
+         <header>
+            <img src="img/isologo.png" alt="Isologo">
+            <img src="img/ojosau01.png" alt="" class="ojo">
+            <nav>
+                <a href="#home">
+                    <img src="img/border-botton-arriba.png" alt="">
+                    HOME
+                    <img src="img/border-botton-abajo.png" alt="">
+                </a>
+                <a href="#characters">
+                    <img src="img/border-botton-arriba.png" alt="">
+                    CHARACTERS
+                    <img src="img/border-botton-abajo.png" alt="">
+                </a>
+                <a href="#History">
+                    <img src="img/border-botton-arriba.png" alt="">
+                    HISTORY
+                    <img src="img/border-botton-abajo.png" alt="">
+                </a>
+                <a href="#Weapons">
+                    <img src="img/border-botton-arriba.png" alt="">
+                    WEAPONS
+                    <img src="img/border-botton-abajo.png" alt="">
+                </a>
+            </nav>
+         </header>
+         <!-- Sliders -->
+          <section class="slider owl-carousel owl-theme">
+            <img src="img/shaslide.png" alt="">
+            <img src="img/demonsha.png" alt="">
+            <img src="img/sauronsha.png" alt="">
+            <img src="img/talionsha.png" alt="">
+          </section>
+
+    </main>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document) .ready(function(){
+            $('.owl-carousel').owlCarousel({
+                stagePadding: 0,
+                items: 1,
+                loop: true,
+                margin: 10,
+                nav: true
+            })
+        })
+    </script>
+</body>
+</html>

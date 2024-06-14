@@ -1,0 +1,106 @@
+/* --------
+F O N T S
+----------*/
+@import url('fonts.css');
+/* --------
+R E S E T
+----------*/
+@import url('reset.css');
+/* ------------------
+V A R I A B L E S
+--------------------*/
+:root{
+    font-family: "Jim Nightshade", cursive;
+    --font-heading: 'Jim Nightshade';
+    --font-body: 'Jim Nightshade';
+    --color1: #171D1D;
+    --color2: #000000;
+    --color3: #627F7A;
+    --color4: #324040;
+    --color5: #FFFFFF;
+}
+/* ------------------
+G E N E R A L
+--------------------*/
+body{
+    background-color: var(--color2);
+    color: var(--color5);
+    main{
+        header{
+            background-color: #171D1D;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-inline: 0.4rem;
+            height: 100px;
+            img{
+                transition: transform 0.4s ease-in;
+                width: 323px;
+            }
+            img.ojo{
+                width: 76px;
+            }
+            nav{
+                display: flex;
+                gap: 1rem;
+                a:is(:link, :visited){
+                    color: var(--color5);
+                    font-family: var(--font-heading);
+                    text-decoration: none;
+                    font-size: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    transition: transform 0.2s ease-in;
+                    align-items: center;
+                    width: 193.66px;
+                }
+                a:is(:hover) img:nth-child(2){
+                    transform: translateY(-5px);
+                }
+                a:is(:hover) img:nth-child(1){
+                    transform: translateY(5px);
+                }
+            }
+
+        }
+        section.slider{
+            height: 600px;
+            div.owl-nav {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                button{
+                    transition: all 0.2s ease-in;
+                    span {
+                        background-color: red;
+                        display: flex;
+                        height: 60px;
+                        width: 60px;
+                        text-indent: -9999px;
+                    }
+                }
+                button.owl-prev{
+                    &:hover {
+                        background: transparent;
+                        transform: translatex(-3px);
+                    }
+                    span{
+                        background: url(../img/btn1-Prev.png) no-repeat center;
+                    }
+                }
+                button.owl-next{
+                    &:hover {
+                        background: transparent;
+                        transform: translatex(3px);
+                    }
+                    span{
+                        background: url(../img/btn1-Next.png) no-repeat center;
+                    }
+                }
+            }
+        }
+    }
+}
