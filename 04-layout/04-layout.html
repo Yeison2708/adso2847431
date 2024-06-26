@@ -10,6 +10,7 @@
 </head>
 <body>
     <main>
+        <a name="home"></a>
         <!-- Navbar -->
          <header>
             <img src="img/isologo.png" alt="Isologo">
@@ -38,24 +39,83 @@
             </nav>
          </header>
          <!-- Sliders -->
-          <section class="slider owl-carousel owl-theme">
+          <section class="slider1 owl-carousel owl-theme">
             <img src="img/shaslide.png" alt="">
             <img src="img/demonsha.png" alt="">
             <img src="img/sauronsha.png" alt="">
             <img src="img/talionsha.png" alt="">
           </section>
-
+          <!--Characters-->
+          <section class="characters">
+            <a name="characters"></a>
+            <h2>
+                <img src="img/border4.png" alt="">
+                CHARACTERS
+                <img src="img/borde3.png" alt="">
+            </h2>
+            <div class="slider2 owl-carousel owl-theme">
+                <article>
+                    <figure>
+                        <img src="img/Talion-1.png" alt="Talion">
+                        <figcaption>Talion</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Golum-2.png" alt="Golum">
+                        <figcaption>Golum</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Sauron-3.png" alt="Sauron">
+                        <figcaption>Sauron (Señor oscuro)</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/celebrimbor-4.png" alt="Celebrimbor">
+                        <figcaption>Celebrimbor (Señor de la luz)</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/celebrimbor-4.png" alt="Celebrimbor">
+                        <figcaption>Celebrimbor (Señor de la luz)</figcaption>
+                    </figure>
+                </article>
+            </div>
+          </section>
     </main>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script>
         $(document) .ready(function(){
-            $('.owl-carousel').owlCarousel({
+            $('.slider1').owlCarousel({
                 stagePadding: 0,
                 items: 1,
                 loop: true,
                 margin: 10,
                 nav: true
+            })
+
+            $('.slider2').owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: false,
+                nav: true,
+
+                responsive: {
+                    0:{
+                        items: 1
+                    },
+                    600:{
+                        items: 2
+                    },
+                    1000:{
+                        items: 4
+                    }
+                }
             })
         })
     </script>
