@@ -12,32 +12,47 @@
     <main>
         <a name="home"></a>
         <!-- Navbar -->
-         <header>
-            <img src="img/isologo.png" alt="Isologo">
-            <img src="img/ojosau01.png" alt="" class="ojo">
-            <nav>
-                <a href="#home">
-                    <img src="img/border-botton-arriba.png" alt="">
-                    HOME
-                    <img src="img/border-botton-abajo.png" alt="">
-                </a>
-                <a href="#characters">
-                    <img src="img/border-botton-arriba.png" alt="">
-                    CHARACTERS
-                    <img src="img/border-botton-abajo.png" alt="">
-                </a>
-                <a href="#History">
-                    <img src="img/border-botton-arriba.png" alt="">
-                    HISTORY
-                    <img src="img/border-botton-abajo.png" alt="">
-                </a>
-                <a href="#Weapons">
-                    <img src="img/border-botton-arriba.png" alt="">
-                    WEAPONS
-                    <img src="img/border-botton-abajo.png" alt="">
-                </a>
-            </nav>
-         </header>
+    <header>
+        <img src="img/isologo.png" alt="Isologo">
+        <img class="ojo" src="img/ojosau01.png" alt="">
+        <button class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav>
+            <a href="#home">
+                <img src="img/border-botton-arriba.png" alt="">
+                HOME
+                <img src="img/border-botton-abajo.png" alt="">
+            </a>
+            <a href="#characters">
+                <img src="img/border-botton-arriba.png" alt="">
+                CHARACTERS
+                <img src="img/border-botton-abajo.png" alt="">
+            </a>
+            <a href="#History">
+                <img src="img/border-botton-arriba.png" alt="">
+                HISTORY
+                <img src="img/border-botton-abajo.png" alt="">
+            </a>
+            <a href="#Weapons">
+                <img src="img/border-botton-arriba.png" alt="">
+                WEAPONS
+                <img src="img/border-botton-abajo.png" alt="">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Menú para dispositivos móviles -->
+
+    <div class="mobile-menu">
+        <a href="#home">HOME</a>
+        <a href="#characters">CHARACTERS</a>
+        <a href="#History">HISTORY</a>
+        <a href="#Weapons">WEAPONS</a>
+    </div>
+
          <!-- Sliders -->
           <section class="slider1 owl-carousel owl-theme">
             <img src="img/shaslide.png" alt="">
@@ -63,7 +78,7 @@
                 <article>
                     <figure>
                         <img src="img/Golum-2.png" alt="Golum">
-                        <figcaption>Golum</figcaption>
+                        <figcaption>Gollum</figcaption>
                     </figure>
                 </article>
                 <article>
@@ -80,31 +95,168 @@
                 </article>
                 <article>
                     <figure>
-                        <img src="img/celebrimbor-4.png" alt="Celebrimbor">
-                        <figcaption>Celebrimbor (Señor de la luz)</figcaption>
+                        <img src="img/nazgul.jpg" alt="Nazgul">
+                        <figcaption>Los Nazgul</figcaption>
                     </figure>
                 </article>
             </div>
           </section>
+
+        <!--History-->
+
+        <section class="history">
+            <a name="History"></a>
+            <div class="history-background">
+              <h2>
+                  <img src="img/border4.png" alt="">
+                  HISTORY
+                  <img src="img/borde3.png" alt="">
+              </h2>
+              <div class="slider3 owl-carousel owl-theme">
+                  <article>
+                      <figure>
+                          <img src="img/Talion-1.png" alt="Talion">
+                          <figcaption>Talion</figcaption>
+                          <div class="info_histo">
+                              <h3>Talion</h3>
+                              <p>Talion era un montaraz de Gondor que vivía en Puerta Negra, 
+                                la puerta de entrada a las tierras de Mordor. Talion vivía allí con su esposa e hijo. 
+                                Al comienzo del juego, el puesto de vigilancia es atacado por agentes de Sauron. 
+                                La familia de Talion es asesinada por un sirviente, 
+                                conocido como la La Mano Negra de Sauron.
+                            </p>
+                          </div>
+                      </figure>
+                  </article>
+                  <article>
+                      <figure>
+                          <img src="img/Golum-2.png" alt="Golum">
+                          <figcaption>Gollum</figcaption>
+                          <div class="info_histo">
+                              <h3>Golum</h3>
+                              <p> vivió sus primeros años de vida con su familia cerca de los Campos Gladios bajo el régimen matriarcal de su Abuela. 
+                                Alrededor del año 2463 su primo Deagol encontró el anillo único mientras pescaba, y Sméagol lo asesino para arrebatárselo. 
+                                Pronto se volvió odioso para su familia y fue expulsado de la comunidad.</p>
+                          </div>
+                      </figure>
+                  </article>
+                  <article>
+                      <figure>
+                          <img src="img/Sauron-3.png" alt="Sauron">
+                          <figcaption>Sauron (Señor oscuro)</figcaption>
+                          <div class="info_histo">
+                              <h3>Sauron (Señor oscuro)</h3>
+                              <p>Sauron era el más poderoso de los maiar, 
+                                y era bondadoso en un principio y en ese tiempo respondía al nombre de Mairon "El Admirable".
+                                Sauron junto a Melkor (Morgoth), tras unirse abiertamente a él. 
+                                Luego fue tentado y corrompido por Melkor, cuando los Valar y los maiar aún daban forma a Arda.</p>
+                          </div>
+                      </figure>
+                  </article>
+                  <article>
+                      <figure>
+                          <img src="img/celebrimbor-4.png" alt="Celebrimbor">
+                          <figcaption>Celebrimbor (Señor de la luz)</figcaption>
+                          <div class="info_histo">
+                              <h3>Celebrimbor (Señor de la luz)</h3>
+                              <p>Celebrimbor era un príncipe noldorin, último de la Casa de Fëanor, que quedaba en la Tierra Media. Es el gobernante del reino de Eregion durante la segunda edad, 
+                                y el creador de los Anillos de Poder. Él era el hijo de Curufin, quinto hijo de Fëanor y Nerdanel. 
+                                Celebrimbor se instaló en la Eregion durante la Segunda Edad.</p>
+                          </div>
+                      </figure>
+                  </article>
+                  <article>
+                    <figure>
+                        <img src="img/nazgul.jpg" alt="Nazgul">
+                        <figcaption>Los Nazgul</figcaption>
+                        <div class="info_histo">
+                            <h3>Los Nazgul</h3>
+                            <p>Los Nazgûl, o Espectros del Anillo, son nueve guerreros que sirven a Sauron en su búsqueda por conquistar la Tierra Media. 
+                                Son guerreros no muertos que fueron once reyes que cayeron bajo la influencia de Sauron después de recibir un Anillo de Poder de él. 
+                                Durante La Tierra Media: Sombras de Guerra.</p>
+                        </div>
+                    </figure>
+                </article>
+              </div>
+            </div>
+        </section>
+
+        <!--Weapons-->
+
+        <section class="weapons">
+            <a name="Weapons"></a>
+            <div>
+                <h2>
+                    <img src="img/border4.png" alt="">
+                    WEAPONS
+                    <img src="img/borde3.png" alt="">
+                </h2>
+                <div class="slider4 owl-carousel owl-theme">
+                    <article>
+                        <figure>
+                            <img src="img/espada.png" alt="Espada">
+                            <img src="img/anillo.png" alt="Anillo">
+                        </figure>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="img/arco.png" alt="Arco">
+                            <img src="img/armadura.png" alt="Armadura">
+                        </figure>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="img/daga.png" alt="Daga">
+                            <img src="img/casco.png" alt="Casco">
+                        </figure>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="img/marti.png" alt="Martillo">
+                            <img src="img/habilidades.png" alt="Habilidades">
+                        </figure>
+                    </article>
+                </div>
+                <h1>
+                    <button class="btn">
+                        DESCRIPCIÓN
+                    </button>
+                </h1>
+            </div>
+        </section>
+
+        <section class="websocial">
+    <div class="webs">
+        <article>
+            <figure>
+                <img src="img/logsteam.png" alt="">
+                <img src="img/logox.png" alt="">
+                <img src="img/logodis.png" alt="">
+                <img src="img/logogit.png" alt="">
+            </figure>
+        </article>
+        <h1>ALL RIGHT RESERVED</h1>
+    </div>
+</section>
+
     </main>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script>
-        $(document) .ready(function(){
+        $(document).ready(function(){
             $('.slider1').owlCarousel({
                 stagePadding: 0,
                 items: 1,
                 loop: true,
                 margin: 10,
                 nav: true
-            })
+            });
 
             $('.slider2').owlCarousel({
                 loop: true,
                 margin: 10,
                 dots: false,
                 nav: true,
-
                 responsive: {
                     0:{
                         items: 1
@@ -116,8 +268,79 @@
                         items: 4
                     }
                 }
-            })
-        })
+            });
+
+            $('.slider3').owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: false,
+                nav: true,
+                responsive: {
+                    0:{
+                        items: 1
+                    },
+                    600:{
+                        items: 1
+                    },
+                    1000:{
+                        items: 2
+                    }
+                }
+            });
+
+            $('.slider3').owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: false,
+                nav: true,
+                responsive: {
+                    0:{
+                        items: 1
+                    },
+                    600:{
+                        items: 1
+                    },
+                    1000:{
+                        items: 2
+                    }
+                }
+            });
+
+            $('.slider4').owlCarousel({
+                responsive: {
+                    0:{
+                        items: 2
+                    },
+                    600:{
+                        items: 3
+                    },
+                    1000:{
+                        items: 5
+                    }
+                }
+            });
+        });
     </script>
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active'); // Agrega o quita la clase 'active' para mostrar/ocultar el menú
+    
+            // Ajustar la posición vertical del menú hamburguesa
+            if (menu.classList.contains('active')) {
+                menu.style.top = `${window.scrollY + 70}px`; // Ajusta según el tamaño de tu header
+            }
+    
+            // Cerrar automáticamente el menú al hacer clic en un enlace
+            var links = document.querySelectorAll('.mobile-menu a');
+            links.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+    
 </body>
 </html>
+
