@@ -170,7 +170,11 @@ section.characters {
     div.slider2 {
         margin-inline: auto;
         margin-block: 2rem;
+<<<<<<< HEAD
         width: 98%;
+=======
+        width: 90%;
+>>>>>>> da9425115e60d6e3b5d160c580b082c12fe3a525
         article {
             height: 400px;
             figure {
