@@ -30,8 +30,8 @@ body {
 }
 
 img.ojo {
-    width: 76px;
-    margin-right: 100px; 
+    width: 60px;
+    margin-right: 150px; 
     position: relative;
 }
 
@@ -50,7 +50,8 @@ main {
 
     img {
         transition: transform 0.4s ease-in;
-        width: 323px;
+        width: 200px;
+        display: flex;
     }
 
     
