@@ -316,6 +316,7 @@ section.weapons .slider4 article figure img {
     object-fit: cover;
     border-radius: 50%; 
     margin-bottom: 10px; 
+    margin-left: 30%;
 }
 
 section.weapons .slider4 article figcaption {
@@ -328,6 +329,7 @@ section.weapons .slider4 article figcaption {
     font-size: 24px;
     height: 80px;
     border-radius: 0 0 10px 10px; 
+    
 }
 
 
@@ -402,8 +404,8 @@ section.weapons .btn:hover {
         background: none;
         border: none;
         cursor: pointer;
-        width: 40px; /* Ajusta el tamaño del botón */
-        height: 40px; /* Ajusta el tamaño del botón */
+        width: 40px; 
+        height: 40px; 
     }
 
     .hamburger .bar {
@@ -438,6 +440,15 @@ section.weapons .btn:hover {
         font-size: 24px;
         margin-bottom: 10px;
     }
+    
 }
-
+@media (max-width: 600px){
+    body main{
+        section{
+            h2{
+                margin-inline: auto !important;
+            }
+        }
+    }
+}
 

@@ -311,14 +311,14 @@
     <script>
         function toggleMenu() {
             var menu = document.querySelector('.mobile-menu');
-            menu.classList.toggle('active'); // Agrega o quita la clase 'active' para mostrar/ocultar el menú
+            menu.classList.toggle('active'); 
     
-            // Ajustar la posición vertical del menú hamburguesa
+            
             if (menu.classList.contains('active')) {
-                menu.style.top = `${window.scrollY + 70}px`; // Ajusta según el tamaño de tu header
+                menu.style.top = `${window.scrollY + 70}px`; 
             }
     
-            // Cerrar automáticamente el menú al hacer clic en un enlace
+            
             var links = document.querySelectorAll('.mobile-menu a');
             links.forEach(function(link) {
                 link.addEventListener('click', function() {
