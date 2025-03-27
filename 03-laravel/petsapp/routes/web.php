@@ -1,11 +1,20 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use App\Models\User as User;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+//list all users (Factory challenge
+Route::get('show/users', function () {
+    $users = User::all();
+   //d($users->toArray());
+    return view('users-factory')->with('users', $users);
+});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
