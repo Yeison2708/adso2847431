@@ -53,6 +53,11 @@ class User extends Authenticatable
         ];
     }
 
+    //relationships user hasMany adoptions
+    public function adoptions(){
+        $this->hasMany(Adoption::class);
+    }
+
     /**
      * Get the user's initials
      */

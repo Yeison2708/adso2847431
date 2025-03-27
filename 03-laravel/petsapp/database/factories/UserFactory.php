@@ -23,11 +23,18 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $gender = fake()->randomElement(array('Female', 'Male'));
+        $name = ($gender == 'Female') ? $name = fake() -> firstNameFemale() 
+                                      : $name = fake() -> firstNameMale();
+        ($gender == 'Female') ? $g = 'girl' : $g = 'boy';
+        $id = fake()->numerify('75######');
+        copy('https://avatar.iran.liara.run/public/'.$g, public_path('images/'.$id.'.png'));
         return [
-            'document' => fake()->numerify('75######'),
-            'fullname' => fake()->firstName().' '.fake()->lastName(),
-            'gender'=>  fake()->randomElement(['Male', 'Female']),
+            'document' => $id,
+            'fullname' => $name. " " .fake()->lastName(),
+            'gender'=>  $gender,
             'birthdate' => fake()->dateTimeBetween('1974-01-01','2004-12-31'),
+            'photo' => $id.'.png',
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->numerify('320######'),
             'email_verified_at' => now(),
