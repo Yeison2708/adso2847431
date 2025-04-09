@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class PetSeeder extends Seeder
 {
@@ -14,36 +14,36 @@ class PetSeeder extends Seeder
     public function run(): void
     {
         DB::table('pets')->insert([
-            'name' => 'Firulais',
-            'kind' => 'skinwalker',
-            'weight' => '80',
-            'age'=> '24',
-            'breed' => 'Demoniaca',
-            'location' => 'Kioto',
-            'description' => 'Tiene cancer y es el terror andante de la ciudad, ademas en el dia mide 20 cm y en la noche 2 metros y le gusta robar las almas de los niños',
-            'created_at'=> now()
+            'name' => 'firulais',
+            'kind' => 'Dog',
+            'weight' => '16',
+            'age' => '24',
+            'breed' => 'Pitbull',
+            'location'=> 'mayu',
+            'description' => 'ninguna descripcion',
+            'created_at' => now()
         ]);
 
         DB::table('pets')->insert([
-            'name' => 'Michi',
-            'kind' => 'Cthulhu',
-            'weight' => '100',
-            'age'=> '12',
-            'breed' => 'Rompe Hogares',
-            'location' => 'La calle de la amargura',
-            'description' => 'Es un gato que en realidad es un ser de otra dimension y le gusta destruir matrimonios',
-            'created_at'=> now()
+            'name' => 'Max',
+            'kind' => 'Dog',
+            'weight' => '16',
+            'age' => '12',
+            'breed' => 'Angora',
+            'location'=> 'Colombia',
+            'description' => 'tiene un ojo tuerto',
+            'created_at' => now()
         ]);
 
         DB::table('pets')->insert([
-            'name'=>'Killer',
-            'Kind'=>'Dog',
-            'weight'=> '50',
-            'age'=>'48',
-            'breed'=>'Pincher',
-            'location'=>'Tokio',
-            'description'=>'El perro mas peligroso de la ciudad y el destructor de mundos',
-            'created_at'=>now()
+            'name' => 'Pochito',
+            'kind' => 'Cat',
+            'weight' => '6',
+            'age' => '2',
+            'breed' => 'Siames',
+            'location'=> 'Mexico',
+            'description' => 'es muy jugueton',
+            'created_at' => now()
         ]);
     }
 }

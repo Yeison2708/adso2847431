@@ -26,7 +26,7 @@ class User extends Authenticatable
         'photo',
         'phone',
         'email',
-        'password',
+        'pasword',
         'role'
     ];
 
@@ -53,9 +53,10 @@ class User extends Authenticatable
         ];
     }
 
-    //relationships user hasMany adoptions
+
+    //relationShip: user hasMany Adoption
     public function adoptions(){
-        $this->hasMany(Adoption::class);
+        return $this->hasMany(Adoption::class);
     }
 
     /**

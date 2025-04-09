@@ -16,16 +16,16 @@ class PetFactory extends Factory
      */
     public function definition(): array
     {
-        $kind = fake()->randomElements(['dog', 'cat', 'pig','rodent','fish']);
         return [
-            'name' => fake()->domainWord(),
-            'kind'=> implode ($kind), 
-            'weight'=> fake()->randomnumber(1, 80),
-            'age'=> fake()->randomnumber(2, true),
-            'breed'=>fake()-> colorName(),
-            'location'=> fake()->city(),
-            'description'=> fake()->sentence(10),
-            'created_at'=> now()
+           'name' =>fake()->word,
+           'kind' => fake()->randomElement(['Dog', 'Cat', 'Bird', 'Fish']),
+            'weight' =>fake()->randomNumber(2,true),
+            'age' =>fake()->randomNumber(2,true),
+            'breed' => fake()->colorName(),
+            'location' =>fake()->city(),
+            'description'=>fake()->sentence(10),
+            'created_at' => now()
+
         ];
     }
 }
