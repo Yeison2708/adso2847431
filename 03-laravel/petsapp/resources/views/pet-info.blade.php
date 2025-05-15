@@ -19,7 +19,7 @@
                 <div class="card bg-base-100 shadow-sm">
                     <!-- Imagen centrada -->
                     <figure class="flex justify-center items-center p-4">
-                        <img src="{{ asset('images/' . $pet->image) }}" alt="{{ $pet->name }}"
+                        <img src="{{ asset('http://127.0.0.1:8000/images/no-imagage.png' . $pet->image) }}" alt="{{ $pet->name }}"
                             class="w-40 h-40 object-cover rounded-lg" />
                     </figure>
 

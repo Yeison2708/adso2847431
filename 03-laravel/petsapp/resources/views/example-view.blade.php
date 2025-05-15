@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="p-6 bg-base-100 text-base-content">
 
-    <h1 class="text-4xl  ">{{ $title }}</h1>
-
+    <h1 class="text-4xl font-bold mb-6">{{ $title }}</h1>
 
     <div class="overflow-x-auto">
         <table class="table">
-            <!-- head -->
+            <!-- Table Head -->
             <thead>
                 <tr>
                     <th>Name</th>
@@ -25,47 +24,46 @@
                     <th>Actions</th>
                 </tr>
             </thead>
+
+            <!-- Table Body -->
             <tbody>
                 @foreach ($pets as $pet)
-                    <!-- row 1 -->
-                    <tr class="hover:bg-base-300">
+                    <tr class="hover:bg-base-200">
                         <td>
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-4">
                                 <div class="avatar">
-                                    <div class="mask mask-squircle h-12 w-12">
-                                        <img src="{{ asset('images/' . $pet->image) }}" alt="{{ $pet->name }}" />
+                                    <div class="mask mask-squircle w-12 h-12">
+                                        <img src="{{ asset('http://127.0.0.1:8000/images/no-imagage.png' . $pet->images) }}" alt="{{ $pet->name }}" />
                                     </div>
                                 </div>
                                 <div>
                                     <div class="font-bold">{{ $pet->name }}</div>
-
-                                    @if ($pet->kind == 'Dog')
-                                        <div class="badge badge-md badge-primary">{{ $pet->kind }}</div>
+                                    @if ($pet->kind === 'Dog')
+                                        <div class="badge badge-primary">{{ $pet->kind }}</div>
                                     @else
-                                        <div class="badge badge-md  badge-warning">{{ $pet->kind }}</div>
+                                        <div class="badge badge-warning">{{ $pet->kind }}</div>
                                     @endif
                                 </div>
                             </div>
                         </td>
                         <td>
-                            <br />
                             <span class="badge badge-ghost badge-sm badge-warning">{{ $pet->breed }}</span>
                         </td>
                         <td>{{ $pet->location }}</td>
-                        <th>
-                            <a href="http://localhost:8000/show/info/pet/{{ $pet->id }}" class="btn btn-sm btn-outline btn-accent">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="size-6">
+                        <td>
+                            <a href="{{ url('show/info/pet/' . $pet->id) }}" class="btn btn-sm btn-outline btn-accent">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                                 </svg>
-
                             </a>
-                        </th>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
-            <!-- foot -->
+
+            <!-- Table Foot -->
             <tfoot>
                 <tr>
                     <th>Name</th>
@@ -76,6 +74,7 @@
             </tfoot>
         </table>
     </div>
+
 </body>
 
 </html>

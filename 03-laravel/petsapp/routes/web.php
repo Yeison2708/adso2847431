@@ -55,7 +55,7 @@ Route::get('show/info/users',function (){
     return $html . '</table>';
 });
 
-Route::get('/view/blade' ,function (){
+Route::get('/show/pets' ,function (){
     $title = "Examples blade";
     $pets = Pet::whereIn('kind',['cat','dog'])->get();
     return view('example-view')
