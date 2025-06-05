@@ -6,8 +6,8 @@
     <title>List All Users</title>
 </head>
 <body class=
-            "bg-teal-800
-            text-teal-200
+            "bg-purple-800
+            text-purple-200
             flex
             flex-col
             gap-8
@@ -20,7 +20,7 @@
                 text-4xl">
                 List All Users 
                 <small class=
-                "text-teal-400 
+                "text-purple-400 
                 text-lg">
                 Factory challenge
                 </small>
@@ -36,7 +36,7 @@
 
             @foreach($users as $user)
                 <div class=
-                    "bg-teal-700 
+                    "bg-purple-700 
                     flex-col
                     flex
                     p-4 
