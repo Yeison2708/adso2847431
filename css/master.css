@@ -253,3 +253,19 @@ body.level5{
         }
     }
 }
+body.level6{
+    background-color: #1D3D55;
+    background-image: url("/img/gengar.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    header {
+        h1{
+            font-size: 2.8rem;
+        }
+    }
+    menu {
+        a:is(:link, :visited){
+            color: #904396;
+        }
+    }
+}

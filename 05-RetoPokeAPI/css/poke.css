@@ -1,0 +1,288 @@
+/* @font-face {
+    font-family: 'Pokemon Solid';
+    src: url('../fonts/Pokemon Solid.woff2') format('woff2'),
+         url('../fonts/Pokemon Solid.woff') format('woff');    
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pokemon Solid', sans-serif;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .panel-minecraft {
+            background-color: black;
+            box-shadow: 6px 6px #222222;
+            border: 2px solid #999999;
+            padding: 0.5rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            --color: black;
+            --sombra-ancho: 2px;
+            color: white;
+            font-size: clamp(1.25rem, 0.875rem + 2vw, 2rem);
+            text-shadow: 0 var(--sombra-ancho) 0 var(--color),
+                         var(--sombra-ancho) 0 0 var(--color),
+                         var(--sombra-ancho) var(--sombra-ancho) 0 var(--color),
+                         calc(var(--sombra-ancho) * -1) calc(var(--sombra-ancho) * -1) 0 var(--color),
+                         var(--sombra-ancho) calc(var(--sombra-ancho) * -1) 0 var(--color),
+                         calc(var(--sombra-ancho) * -1) var(--sombra-ancho) 0 var(--color);
+        }
+
+        #app-pokedex {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        ul.pokemones {
+            list-style: none;
+            padding: 0.5rem;
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            height: 500px;
+            overflow-y: auto;
+            background-color: black;
+            box-shadow: 6px 6px #222222;
+            border: 2px solid #999999;
+        }
+
+        ul.pokemones li {
+            position: relative;
+            background-color: #181818;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            width: 100%;
+            height: 160px;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        ul.pokemones li.pokemon-seleccionado {
+            background-color: #4c8ee1;
+            overflow: visible;
+        }
+
+        ul.pokemones li .columna1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        ul.pokemones li .columna2 {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+        }
+
+        ul.pokemones li .columna2 img {
+            width: 70px;
+            height: 70px;
+            transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+            opacity: 0.75;
+            --color: white;
+            filter: drop-shadow(0px 1px 0px var(--color))
+                    drop-shadow(-1px 0px 0px var(--color))
+                    drop-shadow(1px 0px 0px var(--color))
+                    drop-shadow(0px 1px 0px var(--color))
+                    drop-shadow(0px -1px 0px var(--color))
+                    drop-shadow(1px 0px 0px var(--color));
+        }
+
+        ul.pokemones li.pokemon-seleccionado .columna2 img {
+            transform: scale(1.2);
+            opacity: 1;
+            --color: #ffda0e;
+        }
+
+        #info-pokemon-panel {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            place-items: center;
+            gap: 0.5rem;
+            background-color: black;
+            border: 2px solid #4c8ee1;
+            box-shadow: 6px 6px #222222;
+            user-select: none;
+            padding: 0.5rem;
+            height: fit-content;
+        }
+
+        #info-pokemon-panel::before {
+            content: attr(data-nombre-pokemon);
+            background: #adcbf1;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            line-height: 2.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        .info-contenido-pokemon {
+            background: #adcbf1;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 10px;
+            color: black;
+        }
+
+        .info-contenido-pokemon h2 {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        
+        .info-contenido-pokemon img {
+            image-rendering: pixelated;
+            width: 200px; 
+            height: 200px; 
+            display: block;
+            margin: 0 auto 1rem auto;
+            filter: drop-shadow(2px 4px 6px black);
+        }
+
+        .info-contenido-pokemon div {
+            margin-top: 0.5rem;
+            width: 100%;
+            color: black;
+        }
+
+        .info-contenido-pokemon div strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .info-contenido-pokemon div > div {
+            background: #222;
+            width: 100%;
+            height: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #5e5e5e;
+        }
+
+        .info-contenido-pokemon div > div > div {
+            height: 100%;
+            background: var(--color-estadistica);
+        }
+
+        select.generacion-pk {
+            display: block;
+            width: 100%;
+            padding: 0.6rem;
+            font-family: 'Minecraft', sans-serif;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            margin: 0.5rem auto;
+            box-shadow: 6px 6px #222222;
+        }
+
+        .cargador {
+            text-align: center;
+            margin: 1rem;
+            font-size: 1rem;
+            color: white;
+            text-shadow: 2px 2px 0px black;
+        }
+
+        .ocultar {
+            display: none !important;
+        }
+
+        @media (max-width: 940px) {
+            #app-pokedex {
+                grid-template-columns: 1fr;
+            }
+
+            ul.pokemones {
+                grid-template-columns: repeat(3, minmax(110px, 1fr));
+            }
+
+            #info-pokemon-panel {
+                position: relative;
+                top: auto;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 680px) {
+            ul.pokemones {
+                grid-template-columns: repeat(2, minmax(110px, 1fr));
+            }
+        }
+
+        @media (max-width: 560px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            ul.pokemones {
+                grid-template-columns: repeat(2, minmax(90px, 1fr));
+                height: 400px;
+            }
+            ul.pokemones li {
+                height: 120px;
+            }
+            ul.pokemones li .columna2 img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .info-contenido-pokemon img {
+                width: 150px; 
+                height: 150px; 
+            }
+        }
+
+        @media (max-width: 435px) {
+            ul.pokemones {
+                grid-template-columns: repeat(1, minmax(90px, 1fr));
+                height: auto;
+            }
+        }
