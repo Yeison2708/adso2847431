@@ -96,9 +96,9 @@
             <input type="password" name="password_confirmation" class="input rounded-full w-full"
                 placeholder="secret" />
 
-            <button class="btn mt-4 p-6 rounded-full text-white bg-cyan-800 w-full">Register</button>
+            <button class="btn mt-4 p-6 rounded-full text-white bg-purple-800 w-full">Register</button>
 
-            <a class="underline mt-2 text-sm text-cyan-800 hover:text-cyan-900 rounded-md focus:outline-none"
+            <a class="underline mt-2 text-sm text-purple-800 hover:text-purple-900 rounded-md focus:outline-none"
                 href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>

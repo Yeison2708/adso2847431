@@ -10,16 +10,23 @@ class Pet extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'image',
+        'imagen',
         'kind',
         'weight',
         'age',
         'breed',
         'location',
-        'description'
+        'description',
+        'status' 
     ];
     // relationShip: pet hasOne Adoption
     public function adoption(){
         return $this->hasOne(Adoption::class);
+    }
+
+   
+    public function getIsAdoptedAttribute()
+    {
+        return (bool) $this->status; 
     }
 }
